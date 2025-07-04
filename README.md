@@ -30,6 +30,18 @@ Project Name: Prime17 Cipher Algorithm Design
 <br><br><br>
 
 
+
+
+## Algorithm Name
+
+Prime17 Cipher
+The name "Prime17 Cipher" reflects the algorithm’s use of prime numbers for key generation, with "17" (a prime number) emphasizing the mathematical foundation and bitwise shifting operations used in encryption and decryption.
+
+## Algorithm Design
+
+The Prime17 Cipher is a symmetric key cryptographic algorithm that combines prime number-based key generation, modular arithmetic, and bitwise operations (XOR and shifts) to encrypt and decrypt text. The algorithm uses a secret key to control the encryption and decryption processes, ensuring security through mathematical complexity.
+
+
 Key Components
 --------------
 
