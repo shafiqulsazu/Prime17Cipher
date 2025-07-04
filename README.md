@@ -227,6 +227,8 @@ Function GeneratePrimes(n)
     Return Primes
 ```
 
+## Flowchart
+
 <p align="center">
   <img src="flowchart.png" alt="HSTU Logo" width="full" height="full">
 </p>
