@@ -226,3 +226,7 @@ Function GeneratePrimes(n)
     EndWhile
     Return Primes
 ```
+
+<p align="center">
+  <img src="flowchart.png" alt="HSTU Logo" width="full" height="full">
+</p>
