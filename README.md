@@ -169,25 +169,14 @@ For each character:
 
 **Per-value process**
 
-| Cipher | =x111 mod 127 | XOR | After XOR | ASCII | Char |
+@ Decryption Giphertext:
 
-| 52 | .. | 2] 72 | 72) H |]
+[52, 52, 76, 92, 36,106, 101,21, 37,117]
 
-| 52 |7e|3|e69 |] 69] €E|
-
-| 7] 7315 | 76] 7]L I
-
-| 92 |75|71|176|76]L |
-
-| 36 | 68 | 11 | 79 | 79 | o |
-
-| 106 | 45 | 13 | 32 | 32 | (space) | | 101 | 92 | 17 | 77 | 77 | M |
-
-| 21 | 82 | 19 | e5 |] o5 J A |
-
-| .. Ae .. ey a Ya a |
-
-| 117 | 78 | 29 | 83 | 83 | s |
+|To reverse this, we use the|ular it of|
+| :- | :- |
+|@||
+|<p>The modular inverse of 8</p><p>127</p><p>1</p><p>8x111mod127=1</p><p>For each value:</p><p>Encrypted x111mod127</p><p>Character</p><p>52 52x 2</p><p>52 70 3 70@3=6969</p><p>76 76x 111%127=73 5</p><p>92 75 7 75@7=7676</p><p>36 68 11 68@11=79</p><p>106 45 13 45@13=32</p><p>101 92 17 92@17=77</p><p>21 82 19 82@19=65</p><p>37 84 23 84@23=67</p><p>117 78 29 78@29=83</p>|<p>mod 127 is 111</p><p>XORValue XOR</p><p>.......... 70@2=7272</p><p>E</p><p>73@5=7676</p><p>L</p><p>79 O</p><p>32 (space)</p><p>77 M</p><p>65 A</p><p>67 C</p><p>83 S</p>|
 
 **Result**
 
