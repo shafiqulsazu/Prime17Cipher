@@ -35,7 +35,7 @@ Key Components
 
 **Key:**A positive integer k (e.g., 17), used to generate a sequence of prime numbers.
 
-**Prime Sequence:**For a key kkk, generate the first nnn prime numbers, where nnn is the length of the plaintext.For example, for k=17, use primes like 2, 3, 5, 7, 11, etc.
+**Prime Sequence:**For a key k, generate the first n prime numbers, where n is the length of the plaintext.For example, for k=17, use primes like 2, 3, 5, 7, 11, etc.
 
 **Encryption:**Each character in the plaintext is transformed using:
 
@@ -59,13 +59,15 @@ Encryption Algorithm
     
 2.  For each character P\[i\] (where i is the index):
     
-    *   Convert P\[i\] to its ASCII value A\[i\].
+    ```sh
+   Convert P\[i\] to its ASCII value A\[i\].
+   
+   Compute C\[i\]=(A\[i\]⊕Pn\[i\])mod  127, where Pn\[i\] is the i-th prime.
         
-    *   Compute C\[i\]=(A\[i\]⊕Pn\[i\])mod  127, where Pn\[i\] is the i-th prime.
+   Left-shift C\[i\] by k mod  7 bits (to limit the shift range).
         
-    *   Left-shift C\[i\] by k mod  7 bits (to limit the shift range).
-        
-    *   Store C\[i\] as the ciphertext character.
+  Store C\[i\] as the ciphertext character.
+   ``` 
         
 3.  Output the ciphertext C.
     
@@ -79,11 +81,13 @@ Decryption Algorithm
     
 2.  For each ciphertext value C\[i\]:
     
-    *   Right-shift C\[i\] by k mod 7 bits to undo the left-shift.
+   ```sh
+  Right-shift C\[i\] by k mod 7 bits to undo the left-shift.
+      
+  Compute A\[i\]=(C\[i\]⊕Pn\[i\])mod  127.
         
-    *   Compute A\[i\]=(C\[i\]⊕Pn\[i\])mod  127.
-        
-    *   Convert A\[i\] back to its corresponding ASCII character.
+  Convert A\[i\] back to its corresponding ASCII character.
+   ``` 
         
 3.  Output the plaintext P.
     
