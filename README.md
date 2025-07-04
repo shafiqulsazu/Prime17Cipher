@@ -183,7 +183,46 @@ For each character:
 | 117 | 78 | 29 | 83 | 83 | S |
 
 
-
 **Result**:
+
 ## HELLO MACS
 
+##  Pseudocode
+```sh
+// Encryption
+Function Encrypt(Plaintext P, Key k)
+    n = length(P)
+    Primes = GeneratePrimes(n) // Generate first n primes
+    Shift = k mod 7
+    Ciphertext C = []
+    For i = 0 to n-1
+        A = ASCII(P[i])
+        Temp = (A XOR Primes[i]) mod 127
+        C[i] = (Temp * 2^Shift) mod 127
+    EndFor
+    Return C
+
+// Decryption
+Function Decrypt(Ciphertext C, Key k)
+    n = length(C)
+    Primes = GeneratePrimes(n)
+    Shift = k mod 7
+    Plaintext P = []
+    For i = 0 to n-1
+        Temp = (C[i] / 2^Shift) mod 127 // Floor division
+        A = (Temp XOR Primes[i]) mod 127
+        P[i] = Character(A)
+    EndFor
+    Return P
+
+// Helper: Generate first n prime numbers
+Function GeneratePrimes(n)
+    Primes = []
+    num = 2
+    While length(Primes) < n
+        If isPrime(num)
+            Append num to Primes
+        num = num + 1
+    EndWhile
+    Return Primes
+```
