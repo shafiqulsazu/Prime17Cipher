@@ -33,11 +33,14 @@ Project Name: Prime17 Cipher Algorithm Design
 Key Components
 --------------
 
-- Key: A positive integer k (e.g., 17), used to generate a sequence of prime numbers.
+**Key:**
+A positive integer k (e.g., 17), used to generate a sequence of prime numbers.
 
-__Prime Sequence:  __For a key k, generate the first n prime numbers, where n is the length of the plaintext.For example, for k=17, use primes like 2, 3, 5, 7, 11, etc.
+**Prime Sequence:**  
+For a key k, generate the first n prime numbers, where n is the length of the plaintext.For example, for k=17, use primes like 2, 3, 5, 7, 11, etc.
 
-** Encryption: ** Each character in the plaintext is transformed using:
+**Encryption:**
+Each character in the plaintext is transformed using:
 
 *   The ASCII value of the character,
     
