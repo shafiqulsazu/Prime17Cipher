@@ -58,15 +58,17 @@ Encryption Algorithm
 1.  Generate the first nnn prime numbers, where nnn is the length of PPP.
     
 2.  For each character P\[i\] (where i is the index):
-    
-    ```sh
+   ```sh
    Convert P\[i\] to its ASCII value A\[i\].
-   
+   ```
+   ```sh
    Compute C\[i\]=(A\[i\]⊕Pn\[i\])mod  127, where Pn\[i\] is the i-th prime.
-        
+   ```
+   ```sh     
    Left-shift C\[i\] by k mod  7 bits (to limit the shift range).
-        
-  Store C\[i\] as the ciphertext character.
+   ```
+   ```sh   
+   Store C\[i\] as the ciphertext character.
    ``` 
         
 3.  Output the ciphertext C.
@@ -81,13 +83,15 @@ Decryption Algorithm
     
 2.  For each ciphertext value C\[i\]:
     
-   ```sh
+  ```sh
   Right-shift C\[i\] by k mod 7 bits to undo the left-shift.
-      
+  ```
+  ```sh   
   Compute A\[i\]=(C\[i\]⊕Pn\[i\])mod  127.
-        
+  ```
+  ```sh   
   Convert A\[i\] back to its corresponding ASCII character.
-   ``` 
+  ``` 
         
 3.  Output the plaintext P.
     
