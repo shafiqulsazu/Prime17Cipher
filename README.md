@@ -109,3 +109,35 @@ Let’s illustrate the algorithm with an example:
 *   **Key:** k=17
     
 *   **Prime Sequence:** For a 10-character plaintext, use the first 10 primes:2,3,5,7,11,13,17,19,23,29
+
+& Encryption Plaintext:
+
+H (ASCII 72), E (ASCII 69), L (ASCII 76), L (ASCII 76), 0 (ASCII 79), (space, ASCII 32), M (ASCII 77), A (ASCII 65), C (ASCII 67), S (ASCII 83)
+
+Shift value:
+
+Letk =17,sok mod 7=3
+
+This means a left shift by 3 bits, or multiplication by 2? = 8
+
+We'll also XOR each character with a unique number in this sequence:
+
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+
+For each character:
+
+|ASCII XOR|Value XOR Result|x8 Mod|127 Final Encrypted|
+| :- | :- | :- | :- |
+|72 2|70|560 560|% 127 = 52 52|
+|69 3|70|560 560|% 127 = 52 52|
+|76 5|73|584 584|% 127 = 76 76|
+|76 7|75|600 600|% 127 = 92 b 7|
+|79 11|68|544 544|% 127 = 36 36|
+|32 13|45|360 360|% 127 = 106 106|
+|77 17|92|736 736|% 127 = 101 101|
+|65 19|82|656 656|% 127 = 21 21|
+|67 23|84|672 672|% 127 = 37 37|
+|8&3 29|78|624|624 % 127 = 117 117|
+
+[52, 52, 76, 92, 36, 106, 101, 21, 37, 117]
+
