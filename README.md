@@ -155,22 +155,34 @@ For each character:
 
 ### Decryption 
 
- **Ciphertext**
+ **Ciphertext**:
 
-~[52, 52, 76, 92, 36, 106, 101, 21, 37, 117]
+[52, 52, 76, 92, 36, 106, 101, 21, 37, 117]
 
-**Parameters**
+**Parameters**:
 
-| Parameter | Value |
 
 | Parameter | Value |
 |-----------|-------|
 | `k mod 7` | **3** (original shift) |
 | Inverse of 8 mod 127 | **111** (because 8 × 111 ≡ 1 mod 127) |
 
-**Per-value process**
+**Per-value process**:
+
+| Cipher | × 111 mod 127 | XOR | After XOR | ASCII | Char |
+|-------:|--------------:|----:|----------:|------:|------|
+| 52 | 70 | 2 | 72 | 72 | H |
+| 52 | 70 | 3 | 69 | 69 | E |
+| 76 | 73 | 5 | 76 | 76 | L |
+| 92 | 75 | 7 | 76 | 76 | L |
+| 36 | 68 | 11 | 79 | 79 | O |
+| 106 | 45 | 13 | 32 | 32 | (space) |
+| 101 | 92 | 17 | 77 | 77 | M |
+| 21 | 82 | 19 | 65 | 65 | A |
+| 37 | 84 | 23 | 67 | 67 | C |
+| 117 | 78 | 29 | 83 | 83 | S |
 
 
 
-**Result**
+**Result**:
 
