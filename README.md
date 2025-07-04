@@ -153,36 +153,41 @@ For each character:
 
 [52, 52, 76, 92, 36, 106, 101, 21, 37, 117]
 
-cf Decryption
+###Decryption 
 
-Ciphertext:
+34H Ciphertext
 
-[52, 52, 76, 92, 36, 106, 101, 21, 37, 117]
+~[52, 52, 76, 92, 36, 106, 101, 21, 37, 117]°
 
-Shift value:
+#4#HtParameters
 
-Again, k mod 7 = 3,so original encryption used multiplication by 8. To reverse this, we use the modular inverse of 8 modulo 127.
+| Parameter | Value |
 
-@ The modular inverse of 8mod 127 is 111 Because 8 x 111 mod 127=1
+— ——
 
-For each value:
+| ~k mod 7 | \*\*3\*\* (original shift) |
 
-Encrypted ... mod 127 XOR Value XOR Result FinalASCII Character 52 52 x 111% 127 = 70 2 70 ®2=72 72
+| Inverse of 8 mod 127 | \*\*111\*\* (because 8 x 111 = 1 mod 127) | #H#HtPer-value process
 
-52 vit) 3 70 @3=69 69
+| Cipher | =x111 mod 127 | XOR | After XOR | ASCII | Char |
 
-76 76 x 111% 127 = 73 5 73 ®5=76 76
+| 52 | .. | 2] 72 | 72) H |]
 
-92 75 7 75 @7=76 76
+| 52 |7e|3|e69 |] 69] €E|
 
-36 68 11 68 @11=79 79
+| 7] 7315 | 76] 7]L I
 
-106 45 13 45 ® 13 = 32 32 (space) 101 92 17 92 @17=77
+| 92 |75|71|176|76]L |
 
-21 82 19 82 @19 =65 65
+| 36 | 68 | 11 | 79 | 79 | o |
 
-37 84 23 84 ® 23 = 67 67
+| 106 | 45 | 13 | 32 | 32 | (space) | | 101 | 92 | 17 | 77 | 77 | M |
 
-117 78 29 78 ® 29 =83 83
+| 21 | 82 | 19 | e5 |] o5 J A |
 
+| .. Ae .. ey a Ya a |
+
+| 117 | 78 | 29 | 83 | 83 | s |
+
+3#HHtResult
 
