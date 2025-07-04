@@ -34,7 +34,7 @@ Project Name: Prime17 Cipher Algorithm Design
 
 ## Algorithm Name
 
-Prime17 Cipher
+**Prime17 Cipher**
 The name "Prime17 Cipher" reflects the algorithm’s use of prime numbers for key generation, with "17" (a prime number) emphasizing the mathematical foundation and bitwise shifting operations used in encryption and decryption.
 
 ## Algorithm Design
@@ -152,4 +152,37 @@ For each character:
 |8&3 29|78|624|624 % 127 = 117 117|
 
 [52, 52, 76, 92, 36, 106, 101, 21, 37, 117]
+
+cf Decryption
+
+Ciphertext:
+
+[52, 52, 76, 92, 36, 106, 101, 21, 37, 117]
+
+Shift value:
+
+Again, k mod 7 = 3,so original encryption used multiplication by 8. To reverse this, we use the modular inverse of 8 modulo 127.
+
+@ The modular inverse of 8mod 127 is 111 Because 8 x 111 mod 127=1
+
+For each value:
+
+Encrypted ... mod 127 XOR Value XOR Result FinalASCII Character 52 52 x 111% 127 = 70 2 70 ®2=72 72
+
+52 vit) 3 70 @3=69 69
+
+76 76 x 111% 127 = 73 5 73 ®5=76 76
+
+92 75 7 75 @7=76 76
+
+36 68 11 68 @11=79 79
+
+106 45 13 45 ® 13 = 32 32 (space) 101 92 17 92 @17=77
+
+21 82 19 82 @19 =65 65
+
+37 84 23 84 ® 23 = 67 67
+
+117 78 29 78 ® 29 =83 83
+
 
