@@ -28,3 +28,73 @@ Project Name: Prime17 Cipher Algorithm Design
 
 
 <br><br><br>
+
+
+Key Components
+--------------
+
+**Key:**A positive integer kkk (e.g., 17), used to generate a sequence of prime numbers.
+
+**Prime Sequence:**For a key kkk, generate the first nnn prime numbers, where nnn is the length of the plaintext.For example, for k=17k = 17k=17, use primes like 2, 3, 5, 7, 11, etc.
+
+**Encryption:**Each character in the plaintext is transformed using:
+
+*   The ASCII value of the character,
+    
+*   A prime number from the generated sequence,
+    
+*   Bitwise XOR and left-shift operations,
+    
+*   Modulo operation using a large prime (e.g., 127).
+    
+
+**Decryption:**Reverse the encryption process using the same key and prime sequence to retrieve the original plaintext.
+
+Encryption Algorithm
+--------------------
+
+**Input:** Plaintext PPP, Key kkk
+
+1.  Generate the first nnn prime numbers, where nnn is the length of PPP.
+    
+2.  For each character P\[i\]P\[i\]P\[i\] (where iii is the index):
+    
+    *   Convert P\[i\]P\[i\]P\[i\] to its ASCII value A\[i\]A\[i\]A\[i\].
+        
+    *   Compute C\[i\]=(A\[i\]⊕Pn\[i\])mod  127C\[i\] = (A\[i\] \\oplus P\_n\[i\]) \\mod 127C\[i\]=(A\[i\]⊕Pn​\[i\])mod127, where Pn\[i\]P\_n\[i\]Pn​\[i\] is the iii-th prime.
+        
+    *   Left-shift C\[i\]C\[i\]C\[i\] by kmod  7k \\mod 7kmod7 bits (to limit the shift range).
+        
+    *   Store C\[i\]C\[i\]C\[i\] as the ciphertext character.
+        
+3.  Output the ciphertext CCC.
+    
+
+Decryption Algorithm
+--------------------
+
+**Input:** Ciphertext CCC, Key kkk
+
+1.  Generate the same sequence of nnn prime numbers using kkk.
+    
+2.  For each ciphertext value C\[i\]C\[i\]C\[i\]:
+    
+    *   Right-shift C\[i\]C\[i\]C\[i\] by kmod  7k \\mod 7kmod7 bits to undo the left-shift.
+        
+    *   Compute A\[i\]=(C\[i\]⊕Pn\[i\])mod  127A\[i\] = (C\[i\] \\oplus P\_n\[i\]) \\mod 127A\[i\]=(C\[i\]⊕Pn​\[i\])mod127.
+        
+    *   Convert A\[i\]A\[i\]A\[i\] back to its corresponding ASCII character.
+        
+3.  Output the plaintext PPP.
+    
+
+Test Case and Experimental Results
+----------------------------------
+
+Let’s illustrate the algorithm with an example:
+
+*   **Plaintext:** HELLO MACS
+    
+*   **Key:** k=17k = 17k=17
+    
+*   **Prime Sequence:** For a 10-character plaintext, use the first 10 primes:2,3,5,7,11,13,17,19,23,292, 3, 5, 7, 11, 13, 17, 19, 23, 292,3,5,7,11,13,17,19,23,29
