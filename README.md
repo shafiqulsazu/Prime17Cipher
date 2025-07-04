@@ -116,9 +116,9 @@ H (ASCII 72), E (ASCII 69), L (ASCII 76), L (ASCII 76), 0 (ASCII 79), (space, AS
 
 Shift value:
 
-Letk =17,sok mod 7=3
+Let k =17, so k mod 7=3
 
-This means a left shift by 3 bits, or multiplication by 2? = 8
+This means a left shift by 3 bits, or multiplication by 2<sup>3</sup> = 8
 
 We'll also XOR each character with a unique number in this sequence:
 
