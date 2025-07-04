@@ -153,21 +153,21 @@ For each character:
 
 [52, 52, 76, 92, 36, 106, 101, 21, 37, 117]
 
-###Decryption 
+### Decryption 
 
-34H Ciphertext
+ **Ciphertext**
 
-~[52, 52, 76, 92, 36, 106, 101, 21, 37, 117]°
+~[52, 52, 76, 92, 36, 106, 101, 21, 37, 117]
 
-#4#HtParameters
+**Parameters**
 
 | Parameter | Value |
 
-— ——
-
 | ~k mod 7 | \*\*3\*\* (original shift) |
 
-| Inverse of 8 mod 127 | \*\*111\*\* (because 8 x 111 = 1 mod 127) | #H#HtPer-value process
+| Inverse of 8 mod 127 | \*\*111\*\* (because 8 x 111 = 1 mod 127) | 
+
+**Per-value process**
 
 | Cipher | =x111 mod 127 | XOR | After XOR | ASCII | Char |
 
@@ -189,5 +189,5 @@ For each character:
 
 | 117 | 78 | 29 | 83 | 83 | s |
 
-3#HHtResult
+**Result**
 
